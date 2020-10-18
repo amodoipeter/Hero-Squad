@@ -19,4 +19,24 @@ public class Hero {
         this.weakness = weakness;
         instances.add(this);
         this.id = instances.size();
+    }
+    public String getName() {return this.name;}
+    public int getAge() {return this.age;}
+    public String getPower() {return this.power;}
+    public String getWeakness() {return this.weakness;}
+    public static ArrayList<Hero> getAllInstances() {return instances;}
+    public static void clearAllHeroes(){instances.clear();}
+    public int getId(){return id;}
+    public static Hero findById(int id) {return instances.get(id-1);}
+
+    public static Hero setUpNewHero(){
+        return new Hero("Peter",24,"Coding","Sleepy");
+    }
+    public static Hero setUpNewHero1(){
+        return new Hero("James",30,"Flying","Dark");
+    }
+    public static Hero setUpNewHero2(){
+        return new Hero("Kelvin",20,"Speed","Blind");
+    }
+
 }
