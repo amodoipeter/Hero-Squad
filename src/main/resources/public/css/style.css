@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css?family=Abel&display=swap');
+
+.landing-page {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 15vh;
+  min-height: 10vh;
+  background: rgb(8, 22, 8);
+  color: white;
+  box-shadow: 0 0 10px rgba(255,255,255,0.4);
+}
+.landing-page h2{
+  z-index: 10;
+	text-align: center;
+	padding: 40px 0;
+}
+.landing-page h2 a{
+	background: green;
+	color: white;
+	border-radius: 20px;
+}
+.land-left,
+.land-right{
+  position: fixed;
+  right: 0px;
+  top: 0vh;
+  width: 50%;
+  height: 100vh;
+  background: rgb(8, 22, 8);
+  z-index: 2;
+}
+.land-left{
+  left: 0px;
+  background: rgb(0, 0, 0);
+}
+.buttons{
+  border: none;
+  cursor: pointer;
+  outline: none;
+  padding: 5px 20px;
+  font-family: 'Abel', sans-serif;
+  border-radius: 20px;
+  margin-top: 5px;
+
+}
+.buttons:hover{
+  background: rgb(0, 0, 0);
+  box-shadow: 0 0 5px rgba(255, 255, 255, 0.24);
+  color: white;
+}
