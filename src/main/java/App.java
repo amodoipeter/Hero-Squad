@@ -77,7 +77,24 @@ public class App {
             model.put("newHero",newSquad.getSquadName());
             return new ModelAndView(model, "success.hbs");
         }, new HandlebarsTemplateEngine());
+        get("/new/:id",(req, res) ->{
+            Map<String, Object> model = new HashMap<>();
+            int idOfHero = Integer.parseInt(req.params(":id"));
+            Hero foundHero = Hero.findById(idOfHero);
+            model.put("hero",foundHero);
+            return new ModelAndView(model, "more.hbs");
+        }, new HandlebarsTemplateEngine());
 
+        get("/squad",(req, res) ->{
+            Map<String, Object> model = new HashMap<>();
+            ArrayList<Squad> squads = Squad.getInstances();
+            model.put("squads",squads);
+            ArrayList<Hero> members = Hero.getAllInstances();
+            model.put("heroes",members);
+            Squad newSquad = Squad.findBySquadId(1);
+            model.put("allSquadMembers", newSquad.getSquadMembers());
+            return new ModelAndView(model, "squad.hbs");
+        }, new HandlebarsTemplateEngine());
 
     }
 }
