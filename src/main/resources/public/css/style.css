@@ -59,7 +59,7 @@ body::-webkit-scrollbar-thumb,
 	padding: 40px 0;
 }
 .landing-pg h2 a{
-	background: green;
+	background: yellow;
 	color: white;
 	border-radius: 20px;
 }
@@ -71,11 +71,11 @@ body::-webkit-scrollbar-thumb,
   width: 50%;
   height: 100vh;
   background: rgb(8, 22, 8);
+ background-color:green;
   z-index: 2;
 }
 .land-left{
   left: 0px;
-  background: rgb(0, 0, 0);
 }
 .hero-img{
   position: relative;
@@ -86,7 +86,7 @@ body::-webkit-scrollbar-thumb,
   height: 70vh;
   overflow: hidden;
   background: url('/img/superhero.jpg');
-  background-size: cover;
+  background-position: top center;
   background-repeat: no-repeat;
   box-shadow: 0 0 20px rgb(24, 44, 13);
   animation: load1 0.8s linear 1;
