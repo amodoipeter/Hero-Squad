@@ -7,7 +7,7 @@ group 'com.techspace'
 version '1.0-SNAPSHOT'
 
 sourceCompatibility = 1.8
-applicationName = "techspaceke-hero-squad"
+applicationName = "Hero-Squad"
 mainClassName = "App"
 
 repositories {
