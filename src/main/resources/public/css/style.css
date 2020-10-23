@@ -89,7 +89,6 @@ body::-webkit-scrollbar-thumb,
   background-position: top center;
   background-repeat: no-repeat;
   box-shadow: 0 0 20px rgb(24, 44, 13);
-  animation: load1 0.8s linear 1;
 }
 .hero-desc{
   width: 40%;
@@ -103,7 +102,6 @@ body::-webkit-scrollbar-thumb,
   padding-top: 20px;
   background: rgba(0, 0, 0, 0.527);
   text-align: center;
-  animation: load 1s linear 1;
 }
 *{
   margin: 0;
@@ -133,12 +131,7 @@ body::-webkit-scrollbar-thumb,
   font-family: sans-serif;
   font-size: 25px;
   outline: none;
-  z-index: 5;
 }
-.hero-btn:hover{
-  background: rgba(255,255,255,0.8);
-  transition: all 0.4s ease;
-  color: black;
 }
 .hero-btn::after{
   content: "";
@@ -148,15 +141,9 @@ body::-webkit-scrollbar-thumb,
   top: -5px;
   border-radius: 50%;
   left: -35px;
-  transition: all 0.4s ease;
-  z-index: 2;
 }
-.hero-btn:hover::after{
-  border-color:rgb(209,209,209);
-  cursor: pointer;
-  left: 92%;
-  transition: all 0.5s ease;
 }
+
 @keyframes load{
   0%{left: -100vw;}
   20%{left: -50vw;box-shadow: 0px 0px 20px rgb(255, 255, 255)}
@@ -253,11 +240,9 @@ body::-webkit-scrollbar-thumb,
   color: white;
   outline: none;
   display: block;
-  animation: formLd 1.2s linear 1;
   font-size: 1em;
 }
 .form>input[type=text]:nth-child(even){
-	animation: formLd 0.8s linear 1;
 }
 @keyframes formLd{
 	0%{width: 0%;border-color: green;box-shadow: 0px 2px 2px rgba(255,255,255,0.3);}
@@ -284,9 +269,7 @@ body::-webkit-scrollbar-thumb,
   width: 70%;
   min-height: 100px;
   margin-top: 20vh;
-  transform: all 2s ease;
   text-align: center;
-  animation: successColor 1s linear 1;
 }
 .success h3 span{
   color: rgb(123, 255, 0);
@@ -309,11 +292,9 @@ body::-webkit-scrollbar-thumb,
   right: 0px;
   border: 5px solid rgb(25, 59, 25);
   height: 100%;
-  animation: success 0.7s linear 1;
 }
 .success::before{
   right: 100%;
-  animation: success1 0.7s linear 1;
 }
 @keyframes success{
   0%{right: 100%;transform: rotate(270deg);}
@@ -357,7 +338,6 @@ position: absolute;
   left: -20px;
   border-radius: 5px;
   z-index: 4;
-  animation: hero 1s linear 1;
 }
 .hero-item a{
 	background: rgb(6, 70, 6);
@@ -408,9 +388,6 @@ position: absolute;
   color: red;
   cursor: pointer;
 }
-.squad>div:nth-child(even){
-	animation: load 1s linear 1;
-}
 .squad-cont{
   position: relative;
   display: inline-block;
@@ -424,7 +401,9 @@ position: absolute;
   border-radius: 5px;
   text-align: left;
   transition: all 2s ease;
+/*
   animation: load1 0.5s linear 1;
+*/
 }
 .add-btn{
   background: green;

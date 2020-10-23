@@ -77,6 +77,7 @@ public class App {
             model.put("newHero",newSquad.getSquadName());
             return new ModelAndView(model, "success.hbs");
         }, new HandlebarsTemplateEngine());
+
         get("/new/:id",(req, res) ->{
             Map<String, Object> model = new HashMap<>();
             int idOfHero = Integer.parseInt(req.params(":id"));
@@ -95,6 +96,7 @@ public class App {
             model.put("allSquadMembers", newSquad.getSquadMembers());
             return new ModelAndView(model, "squad.hbs");
         }, new HandlebarsTemplateEngine());
+
         get("/squad-form",(req, res) ->{
             Map<String, Object> model = new HashMap<>();
             return new ModelAndView(model, "squad-form.hbs");
